@@ -10,6 +10,7 @@
 pushd ${OPENSHIFT_REPO_DIR} > /dev/null
 if [ ! -f db_seeded ]; then
   bundle exec rake db:drop RAILS_ENV="production"
+  bundle exec rake db:migrate RAILS_ENV="production"
   bundle exec rake db:setup RAILS_ENV="production"
   touch db_seeded
   chmod 400 db_seeded
