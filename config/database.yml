@@ -49,7 +49,8 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: refinery_production
   pool: 5
-  username: refinery
-  password:
+  database: <%=ENV['OPENSHIFT_APP_NAME']%>
+  username: <%=ENV['OPENSHIFT_DB_USERNAME']%>
+  password: <%=ENV['OPENSHIFT_DB_PASSWORD']%>
+  host:     <%=ENV['OPENSHIFT_DB_HOST']%>
