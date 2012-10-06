@@ -30,22 +30,19 @@ name.
 1. Change directory to `mycms`
 
         cd mycms
+        rm -rf *
 
 1. Add the `quickstart` remote. (Alternately, you can clone this repo and use the clone's git URL.)
 
-        git remote add quickstart git://github.com/BanzaiMan/refinerycms-quickstart.git
-
-1. Fetch git commits on `quickstart`
-
-        git fetch quickstart
+        git remote add quickstart -m master git://github.com/BanzaiMan/refinerycms-quickstart.git
 
 1. Apply `quickstart`'s changes to the local repository
 
-        git pull quickstart master
+        git pull -s recursive -X theirs quickstart master
     
 1. Push the code to your OpenShift application
 
-        git push origin master
+        git push
     
     This can take a few minutes while assets are recompiled,
     databases are initialized, and Passenger warms up.
