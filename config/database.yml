@@ -51,6 +51,6 @@ production:
   encoding: unicode
   pool: 5
   database: <%=ENV['OPENSHIFT_APP_NAME']%>
-  username: <%=ENV['OPENSHIFT_DB_USERNAME']%>
-  password: <%=ENV['OPENSHIFT_DB_PASSWORD']%>
-  host:     <%=ENV['OPENSHIFT_DB_HOST']%>
+  username: <%=ENV['OPENSHIFT_POSTGRESQL_DB_USERNAME']%>
+  password: <%=ENV['OPENSHIFT_POSTGRESQL_DB_PASSWORD']%>
+  host:     <%=ENV['OPENSHIFT_POSTGRESQL_DB_HOST']%>
